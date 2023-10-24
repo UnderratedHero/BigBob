@@ -2,33 +2,27 @@
 
 public class Jump : MonoBehaviour
 {
-    Rigidbody rigidbody;
-    public float jumpStrength = 2;
-    public event System.Action Jumped;
+    [SerializeField] private PlayerInput _input;
+    [SerializeField] private Rigidbody _rigidBody;
+    [SerializeField] private PlayerConfig _config;
+    [SerializeField] private GroundCheck _groundCheck;
 
-    [SerializeField, Tooltip("Prevents jumping when the transform is in mid-air.")]
-    GroundCheck groundCheck;
-
-
-    void Reset()
+    private void OnEnable()
     {
-        // Try to get groundCheck.
-        groundCheck = GetComponentInChildren<GroundCheck>();
+        _input.OnJumpPressed += PlayerJump;
     }
 
-    void Awake()
+    private void OnDisable()
     {
-        // Get rigidbody.
-        rigidbody = GetComponent<Rigidbody>();
+        _input.OnJumpPressed -= PlayerJump;
     }
 
-    void LateUpdate()
+    private void PlayerJump()
     {
-        // Jump when the Jump button is pressed and we are on the ground.
-        if (Input.GetButtonDown("Jump") && (!groundCheck || groundCheck.isGrounded))
+        if(!_groundCheck.IsGrounded)
         {
-            rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
-            Jumped?.Invoke();
+            return;
         }
+        _rigidBody.AddForce(_config.JumpSpeed * Vector3.up, ForceMode.Impulse);
     }
 }

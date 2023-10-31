@@ -3241,7 +3241,7 @@ GameObject:
   - component: {fileID: 1139252561}
   m_Layer: 0
   m_Name: rus_build_9et_01a
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4603,7 +4603,7 @@ GameObject:
   - component: {fileID: 1492389818}
   m_Layer: 0
   m_Name: house_ruined
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4673,7 +4673,7 @@ GameObject:
   - component: {fileID: 1588935951}
   m_Layer: 0
   m_Name: rus_build_9et_03
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5852,7 +5852,7 @@ GameObject:
   - component: {fileID: 1779294203}
   m_Layer: 0
   m_Name: rus_build_4et_01
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7861,7 +7861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9060109774320584321, guid: 5ec640f852b398840981535d0e0f5b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.284
+      value: 43.92
       objectReference: {fileID: 0}
     - target: {fileID: 9060109774320584321, guid: 5ec640f852b398840981535d0e0f5b8e, type: 3}
       propertyPath: m_LocalPosition.z

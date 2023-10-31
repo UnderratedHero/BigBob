@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
 
     private void PlayerJump()
     {
-        if(!_groundCheck.IsGrounded)
+        if (!_groundCheck.IsGrounded)
         {
             return;
         }

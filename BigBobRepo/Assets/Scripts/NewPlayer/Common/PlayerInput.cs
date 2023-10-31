@@ -11,9 +11,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private string _verticalMouse;
 
     public event Action OnJumpPressed;
-    public event Action OnWalkMove;
-    public event Action OnRunMove;
 
+    public bool IsRun { get; private set; }
     public Vector3 MoveDirection { get; private set; }
     public Vector2 MouseMoveDirection { get; private set; }
 
@@ -24,14 +23,13 @@ public class PlayerInput : MonoBehaviour
             OnJumpPressed?.Invoke();
         }
 
-        if(Input.GetButtonDown(_runButton))
+        if (Input.GetButton(_runButton))
         {
-            OnRunMove?.Invoke();
+            IsRun = true;
         }
-
-        if(Input.GetButtonUp(_runButton))
+        else
         {
-            OnWalkMove?.Invoke();
+            IsRun = false;
         }
 
         MouseMoveDirection = new Vector2(Input.GetAxisRaw(_horizontalMouse), Input.GetAxisRaw(_verticalMouse));

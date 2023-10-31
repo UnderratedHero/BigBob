@@ -14,7 +14,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(_collisionTag))
+        if (other.CompareTag(_collisionTag))
         {
             _collisions++;
             IsGrounded = true;
@@ -23,7 +23,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag(_collisionTag))
+        if (other.CompareTag(_collisionTag))
         {
             _collisions--;
 

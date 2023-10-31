@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   <JumpSpeed>k__BackingField: 5
-  <WalkSpeed>k__BackingField: 5
-  <RunSpeed>k__BackingField: 10
-  <CameraSmooth>k__BackingField: 1.5
-  <MouseSensivity>k__BackingField: 2
+  <WalkSpeed>k__BackingField: 3
+  <RunSpeed>k__BackingField: 6
+  <CameraSmooth>k__BackingField: 2.5
+  <MouseSensivity>k__BackingField: 2.5

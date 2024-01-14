@@ -10,7 +10,12 @@ public class PlayerGravity : MonoBehaviour
     [SerializeField] private WallCheck _wallCheck;
     private bool _isReseted = true;
     private const float GRAVITY = -9.81f;
-    private const float MULTIPLIER_DEFAULT = 0.5f;
+    private float _multiplierDefault;
+
+    private void Awake()
+    {
+        _multiplierDefault = _gravityMultiplier;
+    }
 
     private void FixedUpdate()
     {
@@ -27,7 +32,7 @@ public class PlayerGravity : MonoBehaviour
         else if(_groundCheck.IsGrounded && !_isReseted)
         {
             _isReseted = true;
-            _gravityMultiplier = MULTIPLIER_DEFAULT;
+            _gravityMultiplier = _multiplierDefault;
         }
         else if(!_groundCheck.IsGrounded && _isReseted)
         {

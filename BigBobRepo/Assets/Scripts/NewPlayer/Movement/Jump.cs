@@ -6,6 +6,7 @@ public class Jump : MonoBehaviour
     [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private PlayerConfig _config;
     [SerializeField] private GroundCheck _groundCheck;
+    [SerializeField] private float _jumpMultiplier;
 
     private void OnEnable()
     {
@@ -23,6 +24,6 @@ public class Jump : MonoBehaviour
         {
             return;
         }
-        _rigidBody.AddForce(_config.JumpSpeed * Vector3.up, ForceMode.Impulse);
+        _rigidBody.AddForce(_config.JumpSpeed * Vector3.up * _jumpMultiplier, ForceMode.Impulse);
     }
 }

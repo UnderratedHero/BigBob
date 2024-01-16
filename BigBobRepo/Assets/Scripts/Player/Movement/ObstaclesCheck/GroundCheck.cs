@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
     [SerializeField] private string _collisionTag;
     private int _collisions;
-
     public bool IsGrounded { get; private set; }
 
     private void Start()

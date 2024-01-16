@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerGravity : MonoBehaviour
+public class Gravity : MonoBehaviour
 {
     [SerializeField] private float _gravityMultiplier;
     [SerializeField] private float _multiplierIncrease;
